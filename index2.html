@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grids</title>
+    <style>
+         .wrapper div{
+            background-color:darksalmon;
+            padding:1em;
+         }
+         .wrapper div:nth-child(odd)
+         {
+             background-color: hotpink;
+             color:lavender;
+         }
+         .wrapper {
+             display: grid;
+             /*grid-template-columns: 1fr 1fr;*/
+             grid-template-columns: repeat(6,1fr);
+             grid-column-gap: 1em;
+             grid-row-gap:1em;
+            /* grid-auto-rows: 100px;*/
+            grid-auto-rows: minmax(300px,auto);
+            
+         }
+         .nested{
+             display:grid;
+             grid-template-columns: 1fr 1fr 1fr;
+             
+         }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>  Lorem ipsum dolor sit </div>
+        <div>Lorem ipsum dolor sit </div>
+        <div class="nested">
+            <div>1</div>
+            <div> 2</div>
+            <div> 3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+           <div>7</div>
+           <div>8 </div>
+           <div>9</div>
+
+        </div>
+       <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam ullam eaque commodi neque repellat dolore aut earum aliquid, autem dolores tempora eos, fugiat sed molestias optio sint asperiores. Eligendi, fuga.</div>
+       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sint. Earum accu!!!</div> 
+      <div>Lorem ipsum dolor sit.</div>
+      <div>Lorem ipsum dolor sit amet.</div>
+       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis earum maiores asperiores. Dolor, dolorum esse, doloremque voluptate iste quis fugit magnam tempora aperiam ea culpa cum, possimus reprehenderit libero reiciendis.  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id aliquid, dolores laudantium asperiores consequatur sapiente. Quasi quidem iusto vero provident rem perferendis deserunt accusamus, quis repellendus! Dolor blanditiis eos molestias.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, aperiam. Earum obcaecati exercitationem voluptatibus incidunt quasi inventore, laudantium quas repellendus corrupti ab adipisci, excepturi dicta, voluptatem rerum facilis eaque. Facilis!</div>
+        <div>hellooo</div>
+    </div>
+</body>
+</html>
